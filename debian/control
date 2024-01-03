@@ -1,0 +1,25 @@
+Source: soapyafedri
+Maintainer: Jakob Ketterl <jakob.ketterl@gmx.de>
+Section: hamradio
+Priority: optional
+Rules-Requires-Root: no
+Standards-Version: 4.2.0
+Build-Depends: debhelper (>= 12.0), cmake (>= 3), libsoapysdr-dev
+Vcs-Browser: https://github.com/alexander-sholohov/SoapyAfedri
+Vcs-Git: https://github.com/alexander-sholohov/SoapyAfedri.git
+
+Package: soapysdr0.8-module-afedri
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: SoapyAfedri - Afedri SDR device support for SoapySDR.
+ A SoapySDR module that supports Afedri SDR devices within the SoapySDR API.
+
+Package: soapysdr-module-afedri
+Architecture: all
+Depends: soapysdr0.8-module-afedri, ${misc:Depends}
+Description: SoapyAfedri - Afedri SDR device support for SoapySDR.
+ A SoapySDR module that supports Afedri SDR devices within the SoapySDR API.
+ .
+ This is an empty dependency package that pulls in the Afedri module
+ for the default version of libsoapysdr.
